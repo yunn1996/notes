@@ -61,10 +61,57 @@
 
 5. ###### How to respond to events and update the screen
 
-   I would like to introduce some ways to handle events in React.As below
+   I would like to use a click event to introduce how to handle event in React.
 
    ```react
-   // 1. 
+   // 1.  
+   export default function Button(props) {
+     
+      /* function handleClick() {
+           alert('clicked!')
+       }
+   
+       return (
+           <button onClick={handleClick}>
+               click me !
+           </button>
+       )*/
+   
+      /* return (
+           <button onClick={function handleClick2() {
+               alert("clicked2")
+           }
+           }>
+               click me !
+           </button>
+       )*/
+   
+       return (
+           <button onClick={() => alert('click by anonymous function')}>click me</button>
+       )
+   };
+   
+   // 2.
+   export function AlertButton({message, children}) {
+       return (
+           <button onClick={() => alert(message)}>
+               {children}
+           </button>
+       );
+   }
+   
+   export function Toolbar() {
+       return (
+           <div>
+               <AlertButton message="Playing movie now！">
+                  Play Chang An (长安三万里)
+               </AlertButton>
+               <AlertButton message="正在上传！">
+                  Upload image of Himalaya
+               </AlertButton>
+           </div>
+       );
+   }
    ```
 
    
