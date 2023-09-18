@@ -1,4 +1,4 @@
-#### React (https://zh-hans.react.dev/)
+#### React Tutorial
 
 1. ###### How to create and nest component?
 
@@ -60,5 +60,13 @@
    You can choose index.js in root directory then add js file what you want to display.
 
 5. ###### How to respond to events and update the screen
+
+   I would like to introduce some ways to handle events in React.As below
+
+   ```react
+   // 1. 
+   ```
+
+   
 
 6. ###### How to share data between components
